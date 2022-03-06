@@ -6,6 +6,7 @@
 - SQLAlchemy 1.4.31
 - pytz  2021.3
 - Flask  2.0.2
+```
 
 # Usage
 ```
