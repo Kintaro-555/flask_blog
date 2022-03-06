@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+   <title>ブログ</title>
+   <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body >
+    <h1>プログアプリケーション</h1>
+    <a href="/create" role="button">新規作成画面</a>
+    <a href="/logout" role="button">ログアウト</a>
+
+    <!--jinja2 templates-->
+    {% for post in posts %}
+    <article class="post_frame">
+        <h2>{{ post.title }}</h2>
+        <p>作成日時:{{post.created_at}}</p>
+        <p>{{post.body}}</p>
+        <a href="/{{post.id}}/update" roll="button">編集</a>
+        <a href="/{{post.id}}/delete" roll="button">削除</a>
+    </article>
+    {% endfor %}
+</body>
+</html>
+
